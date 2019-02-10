@@ -10,5 +10,7 @@ package domoticajavieroi;
  * @author Javier
  */
 public class Main {
-    
+    public static void main(String[] args) {
+        Vista.mostrarMenu();
+    }
 }
