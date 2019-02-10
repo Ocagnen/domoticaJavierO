@@ -63,6 +63,7 @@ public class Vista {
                             break;
 
                     }
+                    break;
 
                 case 4:
                     System.out.println("Introduce accion a realizar");
