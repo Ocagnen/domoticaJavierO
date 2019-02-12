@@ -26,6 +26,10 @@ public class Vista {
 
             respuesta = tec.nextInt();
             switch (respuesta) {
+                case 1:
+                    System.out.println("1. Comprobar hora");
+                    System.out.println("2. Cambiar hora");
+                    break;
                 case 3:
                     System.out.println("Selecciona la habitación que consultar");
                     System.out.println("1. Dormitorio");
