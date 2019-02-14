@@ -31,31 +31,21 @@ public enum Comando {
     ENCENDER_LUZ_DORMITORIO(12, "Enciende la luz del dormitorio"),
     APAGAR_LUZ_DORMITORIO(13,"Apaga la luz del dormitorio"),    
     
-    CONSULTAR_ESTADO_DESPACHO(14,"Consulta el estado general del despacho"),
-    CONSULTAR_PERSIANA_DESPACHO(15,"Consulta el estado de la persiana del despacho"),
-    ABRIR_PERSIANA_DESPACHO(16,"Abre la persiana del despacho"),
-    CERRAR_PERSIANA_DESPACHO(17,"Cierra la persiana del despacho"),
-    CONSULTAR_CAMARA_DESPACHO(18,"Consulta el estado de la cámara del despacho"),
-    ENCENDER_CAMARA_DESPACHO(19,"Enciende la cámara del despacho"),
-    APAGAR_CAMARA_DESPACHO(20,"Apaga la cámara del despacho"),
-    CONSULTAR_LUZ_DESPACHO(21, "Consulta el estado de las luces del despacho"),
-    ENCENDER_LUZ_DESPACHO(22, "Enciende la luz del despacho"),
-    APAGAR_LUZ_DESPACHO(23,"Apaga la luz del despacho"),
+        
+    CONSULTAR_ESTADO_SALON(14,"Consulta el estado general del salón"),
+    CONSULTAR_PERSIANA_SALON(15,"Consulta el estado de la persiana del salón"),
+    ABRIR_PERSIANA_SALON(16,"Abre la persiana del salón"),
+    CERRAR_PERSIANA_SALON(17,"Cierra la persiana del salón"),
+    CONSULTAR_CAMARA_SALON(18,"Consulta el estado de la cámara del salón"),
+    ENCENDER_CAMARA_SALON(19,"Enciende la cámara del salón"),
+    APAGAR_CAMARA_SALON(20,"Apaga la cámara del salón"),
+    CONSULTAR_LUZ_SALON(21, "Consulta el estado de las luces del salón"),
+    ENCENDER_LUZ_SALON(22, "Enciende la luz del salón"),
+    APAGAR_LUZ_SALON(23,"Apaga la luz del salón"),
     
-    CONSULTAR_ESTADO_SALON(24,"Consulta el estado general del salón"),
-    CONSULTAR_PERSIANA_SALON(25,"Consulta el estado de la persiana del salón"),
-    ABRIR_PERSIANA_SALON(26,"Abre la persiana del salón"),
-    CERRAR_PERSIANA_SALON(27,"Cierra la persiana del salón"),
-    CONSULTAR_CAMARA_SALON(28,"Consulta el estado de la cámara del salón"),
-    ENCENDER_CAMARA_SALON(29,"Enciende la cámara del salón"),
-    APAGAR_CAMARA_SALON(30,"Apaga la cámara del salón"),
-    CONSULTAR_LUZ_SALON(31, "Consulta el estado de las luces del salón"),
-    ENCENDER_LUZ_SALON(32, "Enciende la luz del salón"),
-    APAGAR_LUZ_SALON(33,"Apaga la luz del salón"),
-    
-    CONSULTAR_PUERTA_GARAJE(34,"Consulta el estado de la puerta del garaje"),
-    ABRIR_PUERTA_GARAJE(35,"Abre la puerta del garaje"),
-    CERRAR_PUERTA_GARAJE(36, "Cierra la puerta del garaje");
+    CONSULTAR_PUERTA_GARAJE(24,"Consulta el estado de la puerta del garaje"),
+    ABRIR_PUERTA_GARAJE(25,"Abre la puerta del garaje"),
+    CERRAR_PUERTA_GARAJE(26, "Cierra la puerta del garaje");
 
     private int codigo;
     private String descripcion;
