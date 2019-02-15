@@ -5,6 +5,8 @@
  */
 package domoticajavieroi;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author javier
@@ -12,7 +14,8 @@ package domoticajavieroi;
 public class Central {
     
     private Usuario u;
-    
-    
+    private int identificador;
+    private LocalDate fechaInstal;
+   
     
 }
