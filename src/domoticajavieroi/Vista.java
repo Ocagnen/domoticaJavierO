@@ -43,12 +43,12 @@ public class Vista {
 
             case 2:
                 System.out.println("1. Comprobar fecha");
-                
+
                 respuesta = tec.nextInt();
 
                 switch (respuesta) {
                     case 1:
-                        return Comando.CONSULTAR_FECHA;                    
+                        return Comando.CONSULTAR_FECHA;
                 }
                 break;
 
@@ -182,10 +182,24 @@ public class Vista {
                 System.out.println("2. Abrir puerta");
                 System.out.println("3. Cerrar puerta");
                 respuesta = tec.nextInt();
+                switch (respuesta) {
+                    case 1:
+                        return Comando.CONSULTAR_LUZ_SALON;
+                    case 2:
+                        return Comando.ENCENDER_LUZ_SALON;
+                    case 3:
+                        return Comando.APAGAR_LUZ_SALON;
+                }
                 break;
+                
+                
+            case 5:
+                return Comando.APAGAR_SISTEMA;               
 
         }
-        // } while (respuesta != 5);
+        
+        return Comando.APAGAR_SISTEMA;
+               // } while (respuesta != 5);
 
     }
 }
