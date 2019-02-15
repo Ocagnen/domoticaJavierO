@@ -14,9 +14,9 @@ public class Usuario {
     private String nombre;
     private String password;    
 
-    public Usuario(String nombre, String password) {
-        this.nombre = nombre;
-        this.password = password;
+    public Usuario() {
+        this.nombre = "Javier";
+        this.password = "123456";
     }
 
     public String getUser() {
