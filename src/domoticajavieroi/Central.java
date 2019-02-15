@@ -11,4 +11,8 @@ package domoticajavieroi;
  */
 public class Central {
     
+    private Usuario u;
+    
+    
+    
 }

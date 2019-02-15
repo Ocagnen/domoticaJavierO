@@ -11,16 +11,16 @@ package domoticajavieroi;
  */
 public class Usuario {
     
-    private String user;
+    private String nombre;
     private String password;    
 
-    public Usuario(String user, String password) {
-        this.user = user;
+    public Usuario(String nombre, String password) {
+        this.nombre = nombre;
         this.password = password;
     }
 
     public String getUser() {
-        return user;
+        return nombre;
     }
 
     public String getPassword() {
