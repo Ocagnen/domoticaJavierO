@@ -10,13 +10,14 @@ package domoticajavieroi;
  * @author javier
  */
 public class Usuario {
-    
-    private String nombre;
-    private String password;    
 
-    public Usuario() {
-        this.nombre = "Javier";
-        this.password = "123456";
+    private String nombre;
+    private String password;
+
+    public Usuario(String nombre, String password) {
+        this.nombre = nombre;
+        this.password = password;
+    
     }
 
     public String getUser() {
@@ -26,6 +27,5 @@ public class Usuario {
     public String getPassword() {
         return password;
     }
-    
-    
+
 }

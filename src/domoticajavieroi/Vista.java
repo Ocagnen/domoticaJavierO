@@ -202,4 +202,20 @@ public class Vista {
                // } while (respuesta != 5);
 
     }
+    
+    public static boolean loggin(Usuario u){
+        Scanner tec = new Scanner(System.in);
+        
+        System.out.println("Introduce nombre de usuario");
+        String respuesta = tec.nextLine();
+        System.out.println("Introduce contraseña");
+        String pass = tec.nextLine();
+        
+        if(respuesta.equals(u.getUser())&& pass.equals(u.getPassword())){
+            return true;
+        } else {
+            System.out.println("Usuario o contraseña incorrectos");
+            return false;
+        }
+    }
 }
