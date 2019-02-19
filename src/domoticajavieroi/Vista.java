@@ -203,13 +203,15 @@ public class Vista {
 
     }
     
-    public static boolean loggin(Usuario u){
+    public static boolean loggin(){
         Scanner tec = new Scanner(System.in);
         
         System.out.println("Introduce nombre de usuario");
         String respuesta = tec.nextLine();
         System.out.println("Introduce contraseña");
         String pass = tec.nextLine();
+        
+        Usuario u = new Usuario();
         
         if(respuesta.equals(u.getUser())&& pass.equals(u.getPassword())){
             return true;

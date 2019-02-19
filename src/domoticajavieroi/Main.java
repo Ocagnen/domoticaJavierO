@@ -10,7 +10,12 @@ package domoticajavieroi;
  * @author Javier
  */
 public class Main {
-    public static void main(String[] args) {
-        Vista.mostrarMenu();
+    public static void main(String[] args) {       
+        
+        boolean verificar = Vista.loggin();
+        
+        if(verificar){
+            Vista.mostrarMenu();
+        }
     }
 }

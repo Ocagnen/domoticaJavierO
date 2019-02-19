@@ -15,10 +15,9 @@ public class Central {
 
     private Usuario u;
     private int identificador;
-    private LocalDate fechaInstal;  
-    
-    
-    
+    private LocalDate fechaInstal; 
+
+             
     public Usuario getU() {
         return u;
     }
