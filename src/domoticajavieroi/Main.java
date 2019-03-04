@@ -10,7 +10,13 @@ package domoticajavieroi;
  * @author Javier
  */
 public class Main {
-    public static void main(String[] args) {       
+    public static void main(String[] args) {    
+        
+        if(Vista.loggin().equals(new Usuario())){
+            Vista.mostrarMenu();
+        } else {
+            System.out.println("Usuario no autorizado");
+        }
         
         Garaje g1 = new Garaje();
         System.out.println(g1);
