@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class Central {
 
     private Usuario u;
-    private int identificador;
+    private String identificador;
     private LocalDate fechaInstal; 
     private Estancia garaje;
     private Estancia salon;
@@ -25,7 +25,7 @@ public class Central {
         return u;
     }
 
-    public int getIdentificador() {
+    public String getIdentificador() {
         return identificador;
     }
 
