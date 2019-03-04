@@ -16,6 +16,9 @@ public class Central {
     private Usuario u;
     private int identificador;
     private LocalDate fechaInstal; 
+    private Estancia garaje;
+    private Estancia salon;
+    private Estancia dormitorio;
 
              
     public Usuario getU() {
