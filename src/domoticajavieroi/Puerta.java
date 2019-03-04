@@ -11,4 +11,7 @@ package domoticajavieroi;
  */
 public class Puerta {
     
+    private boolean estado;
+    private int retardo; //segundos ( lo que tarda en abrise/ cerrarse)
+    
 }
