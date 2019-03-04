@@ -20,6 +20,7 @@ public class Central {
     private Estancia salon;
     private Estancia dormitorio;
     
+    // Método ejecutar orden
 
              
     public Usuario getU() {

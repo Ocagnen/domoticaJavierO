@@ -13,6 +13,8 @@ public class Usuario {
 
     private String nombre;
     private String password;
+    
+    // Metodo equals y hashcode
 
     public Usuario() {
         this.nombre = "Javier";
