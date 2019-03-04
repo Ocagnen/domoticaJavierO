@@ -203,7 +203,7 @@ public class Vista {
 
     }
     
-    public static boolean loggin(){
+    public static Usuario loggin(){
         Scanner tec = new Scanner(System.in);
         
         System.out.println("Introduce nombre de usuario");
