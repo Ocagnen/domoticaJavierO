@@ -15,5 +15,6 @@ package domoticajavieroi;
 public class Garaje extends Estancia {
     
     private int capacidadVehiculos;
+    private Puerta puertaGaraje;
     
 }
