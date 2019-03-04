@@ -19,6 +19,7 @@ public class Central {
     private Estancia garaje;
     private Estancia salon;
     private Estancia dormitorio;
+    
 
              
     public Usuario getU() {
