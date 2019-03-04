@@ -34,6 +34,35 @@ public class Garaje extends Estancia {
         this.capacidadVehiculos=0;
         this.puertaGaraje= new Puerta();
     }
+
+    public int getCapacidadVehiculos() {
+        return capacidadVehiculos;
+    }
+
+    public void setCapacidadVehiculos(int capacidadVehiculos) {
+        this.capacidadVehiculos = capacidadVehiculos;
+    }
+
+    public Puerta getPuertaGaraje() {
+        return puertaGaraje;
+    }
+
+    public void setPuertaGaraje(Puerta puertaGaraje) {
+        this.puertaGaraje = puertaGaraje;
+    }
+
+    /*public void cambiarM2(int nuevo){
+    super.setM2(nuevo);
+    }
+    */
+    
+    // Ejemplo de acceso a método heredado usando el puntero super, que 
+    // apunta a la clase padre de la clase en la que estoy
+    @Override
+    public String toString() {
+        return super.toString() + "\nGaraje{" + "capacidadVehiculos=" + capacidadVehiculos + ",\n " + puertaGaraje + '}';
+    }
+    
     
     
     
