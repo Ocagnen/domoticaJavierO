@@ -17,7 +17,19 @@ public class Usuario {
     public Usuario() {
         this.nombre = "Javier";
         this.password = "123456";
-    
+
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUser() {
@@ -27,5 +39,12 @@ public class Usuario {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nombre=" + nombre + ", password=" + password + '}';
+    }
+    
+    
 
 }
