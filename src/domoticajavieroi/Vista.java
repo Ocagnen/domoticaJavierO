@@ -213,11 +213,9 @@ public class Vista {
         
         Usuario u = new Usuario();
         
-        if(respuesta.equals(u.getUser())&& pass.equals(u.getPassword())){
-            return true;
-        } else {
-            System.out.println("Usuario o contraseña incorrectos");
-            return false;
-        }
+        u.setNombre(respuesta);
+        u.setPassword(pass);
+        
+        return u;
     }
 }
