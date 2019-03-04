@@ -17,4 +17,24 @@ public class Garaje extends Estancia {
     private int capacidadVehiculos;
     private Puerta puertaGaraje;
     
+    // Los constructores son los únicos métodos que no se heredan
+
+    public Garaje(int capacidadVehiculos, Puerta puertaGaraje, int m2) {        
+       
+        // Llamada al constructor de la clase padre
+        super(m2);
+        this.capacidadVehiculos = capacidadVehiculos;
+        this.puertaGaraje = puertaGaraje;
+    }
+    
+    public Garaje(){
+        
+        //Llama al constructor por defecto de la clase padre
+        super();
+        this.capacidadVehiculos=0;
+        this.puertaGaraje= new Puerta();
+    }
+    
+    
+    
 }
