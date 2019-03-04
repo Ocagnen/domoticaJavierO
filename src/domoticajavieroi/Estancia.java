@@ -13,4 +13,27 @@ public class Estancia {
     
     private int m2;
     
+    public Estancia(){
+        m2 = 0;
+    }
+    
+    public Estancia(int m2){
+        this.m2=m2;
+    }
+
+    public int getM2() {
+        return m2;
+    }
+
+    public void setM2(int m2) {
+        this.m2 = m2;
+    }
+
+    @Override
+    public String toString() {
+        return "Estancia{" + "m2=" + m2 + '}';
+    }
+    
+    
+    
 }
