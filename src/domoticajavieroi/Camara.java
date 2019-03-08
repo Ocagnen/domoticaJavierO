@@ -22,6 +22,22 @@ public class Camara {
     public boolean isEstado() {
         return estado;
     }
+    
+    public int encenderCamara(){
+        if(!this.estado){
+            this.estado=true;
+            return 1;
+        }
+        return -1;
+    }
+    
+    public int apagarCamara(){
+        if(this.estado){
+            this.estado=false;
+            return 1;
+        }
+        return -1;
+    }
 
     public void setEstado(boolean estado) {
         this.estado = estado;
