@@ -40,6 +40,22 @@ public class Puerta {
     public void setRetardo(int retardo) {
         this.retardo = retardo;
     }
+    
+    public int abrirPuerta(){
+        if(!this.estado){
+            this.estado = true;
+            return 1;
+        }
+        return -1;
+    }
+    
+    public int cerrarPuerta(){
+        if(this.estado){
+            this.estado=false;
+            return 1;                   
+        }
+        return -1;
+    }
 
     @Override
     public String toString() {
