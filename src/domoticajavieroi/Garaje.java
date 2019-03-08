@@ -50,6 +50,8 @@ public class Garaje extends Estancia {
     public void setPuertaGaraje(Puerta puertaGaraje) {
         this.puertaGaraje = puertaGaraje;
     }
+    
+    
 
     /*public void cambiarM2(int nuevo){
     super.setM2(nuevo);
