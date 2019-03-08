@@ -30,6 +30,22 @@ public class Luz {
     public void setConsumo(double consumo) {
         this.consumo = consumo;
     }
+    
+    public int encenderLuz(){
+        if(!this.estado){
+            this.estado=true;
+            return 1;
+        }
+        return -1;
+    }
+    
+    public int apagarLuz(){
+        if(this.estado){
+            this.estado=false;
+            return 1;
+        }
+        return -1;
+    }
 
     @Override
     public String toString() {
