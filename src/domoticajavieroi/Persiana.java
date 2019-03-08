@@ -20,6 +20,22 @@ public class Persiana {
         this.largo = largo;
         this.ancho = ancho;
     }
+    
+    public int abrirPersiana(){
+        if(!this.estado){
+            this.estado=true;
+            return 1;
+        }
+        return -1;
+    }
+    
+    public int cerrarPersiana(){
+        if(this.estado){
+            this.estado=false;
+            return 1;
+        }
+        return -1;
+    }
 
     public boolean isEstado() {
         return estado;
