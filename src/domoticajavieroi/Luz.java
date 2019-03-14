@@ -39,7 +39,7 @@ public class Luz {
         return -1;
     }
     
-    public int apagarLuz(){
+    public int apagarLuzManual(){
         if(this.estado){
             this.estado=false;
             return 1;
