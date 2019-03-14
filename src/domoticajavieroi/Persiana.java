@@ -10,35 +10,47 @@ package domoticajavieroi;
  * @author javier
  */
 public class Persiana {
-    
-    private boolean estado;
+
+    private int estado; // 0(cerrada), 1(a la mitad) y 2(abierta)
     private int largo; //cm
     private int ancho; //cm
 
-    public Persiana(boolean estado, int largo, int ancho) {
+    public Persiana(int estado, int largo, int ancho) {
         this.estado = estado;
         this.largo = largo;
         this.ancho = ancho;
     }
-    
-    public int abrirPersiana(){
-        if(!this.estado){
-            this.estado=true;
-            return 1;
-        }
-        return -1;
-    }
-    
-    public int cerrarPersiana(){
-        if(this.estado){
-            this.estado=false;
+
+    public int abrirPersianaCompleta() {
+        if (this.estado == 0 || this.estado == 1) {
+            this.estado = 2;
             return 1;
         }
         return -1;
     }
 
-    public boolean isEstado() {
-        return estado;
+    public int dejarPersianaMitad() {
+        if (this.estado != 1) {
+            this.estado = 1;
+            return 1;
+        }
+
+        return -1;
+    }
+
+    public int cerrarPersiana() {
+        if (this.estado != 0) {
+            this.estado = 0;
+            return 1;
+        }
+        return -1;
+    }
+
+    public void setEstado(int estado) {
+        if (estado > 2 || estado < 0) {
+            estado = 0;
+        }
+        this.estado = estado;
     }
 
     public int getLargo() {
@@ -61,8 +73,5 @@ public class Persiana {
     public String toString() {
         return "Persiana{" + "estado=" + estado + ", largo=" + largo + ", ancho=" + ancho + '}';
     }
-    
-        
-    
-    
+
 }

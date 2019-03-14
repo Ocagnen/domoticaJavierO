@@ -22,6 +22,17 @@ public class Central {
     
     // Método ejecutar orden
 
+    public Central(Usuario u, String identificador, LocalDate fechaInstal, Estancia garaje, Estancia salon, Estancia dormitorio) {
+        this.u = u;
+        this.identificador = identificador;
+        this.fechaInstal = fechaInstal;
+        this.garaje = garaje;
+        this.salon = salon;
+        this.dormitorio = dormitorio;
+    }
+    
+    
+
              
     public Usuario getU() {
         return u;
