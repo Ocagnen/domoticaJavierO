@@ -18,6 +18,10 @@ public class Luz {
         this.estado = estado;
         this.consumo = consumo;
     }
+    
+    public Luz(){
+        
+    }
 
     public boolean isEstado() {
         return estado;
