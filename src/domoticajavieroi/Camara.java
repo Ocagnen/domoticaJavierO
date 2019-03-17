@@ -18,6 +18,10 @@ public class Camara {
         this.estado = estado;
         this.ip = ip;
     }
+    
+    public Camara(){
+        
+    }
 
     public boolean isEstado() {
         return estado;
