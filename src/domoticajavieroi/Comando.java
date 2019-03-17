@@ -50,7 +50,9 @@ public enum Comando {
     CERRAR_PUERTA_GARAJE(28, "Cierra la puerta del garaje"),
     
     APAGAR_TODAS_LUCES(29, "Apaga todas las luces de la casa"),
-    APAGADO_ECO(30,"Apaga luces dependiendo de hora y persiana");
+    APAGADO_ECO(30,"Apaga luces dependiendo de hora y persiana"),
+    
+    MOSTRAR_ESTADO_GENERAL(31, "Muestra el estado general de la vivienda");
     
 
     private int codigo;
