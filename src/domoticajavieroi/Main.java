@@ -16,12 +16,7 @@ public class Main {
             Vista.mostrarMenu();
         } else {
             System.out.println("Usuario no autorizado");
-        }
+        }        
         
-        Garaje g1 = new Garaje();
-        System.out.println(g1);
-        
-        Garaje g2 = new Garaje(2,new Puerta(), 50);
-        System.out.println(g2);
     }
 }
