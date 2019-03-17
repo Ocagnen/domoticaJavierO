@@ -180,7 +180,7 @@ public class Central {
     }
     
     private void consultarLuz(Habitacion hab){
-        hab.getLuz().mostrarLuz();
+        System.out.println(hab.getLuz().mostrarLuz());
     }
     
     private void encenderLuz(Habitacion hab){
