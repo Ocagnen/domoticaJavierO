@@ -15,7 +15,12 @@ public class Dormitorio extends Habitacion{
 
     public Dormitorio(Luz luz, Persiana persiana, Camara camara, int m2) {
         super(luz, persiana, camara, m2);
-    }      
+    }    
+    
+    public Dormitorio(){        
+        super();      
+        
+    }
     
 
     public Orientacion getOrientacion() {
@@ -28,7 +33,7 @@ public class Dormitorio extends Habitacion{
 
     @Override
     public String toString() {
-        return "Dormitorio{" + "orientacion=" + orientacion + '}';
+        return super.toString()+"\tDormitorio{" + "orientacion=" + orientacion + '}';
     }
 
     
