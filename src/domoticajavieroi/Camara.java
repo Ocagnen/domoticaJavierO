@@ -42,6 +42,19 @@ public class Camara {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+    
+    public String mostrarEstadoCam(){
+        
+        String est = "";
+        
+        if(this.estado){
+            est = "Encendida";
+        } else {
+            est = "Apagada";
+        }
+        
+        return est;
+    }
 
     public String getIp() {
         return ip;
@@ -53,7 +66,7 @@ public class Camara {
 
     @Override
     public String toString() {
-        return "Camara{" + "estado=" + estado + ", ip=" + ip + '}';
+        return "Camara{" + "estado=" + mostrarEstadoCam() + ", ip=" + ip + '}';
     }
     
     
