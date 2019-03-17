@@ -20,6 +20,10 @@ public class Persiana {
         this.largo = largo;
         this.ancho = ancho;
     }
+    
+    public Persiana(){
+        
+    }
 
     public int abrirPersianaCompleta() {
         if (this.estado == 0 || this.estado == 1) {
