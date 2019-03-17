@@ -56,10 +56,24 @@ public class Puerta {
         }
         return -1;
     }
+    
+    public String estadoPuerta(){
+        
+        String est = "";
+        
+        if(this.estado){
+            est="Abierta";            
+        } else {
+            est="Cerrada";
+        }
+        
+        return est;
+        
+    }
 
     @Override
     public String toString() {
-        return "Puerta{" + "estado=" + estado + ", retardo=" + retardo + '}';
+        return "Puerta{" + "estado=" + estadoPuerta() + ", retardo=" + retardo + '}';
     }
     
     
