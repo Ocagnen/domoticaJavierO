@@ -6,6 +6,7 @@
 package domoticajavieroi;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.time.LocalDate;
  */
 public class Central {
 
+    private Reloj r;
     private Usuario u;
     private String identificador;
     private LocalDate fechaInstal; 
@@ -31,7 +33,38 @@ public class Central {
         this.dormitorio = dormitorio;
     }
     
+    public void ejecutarOrden(Comando c){
+        
+        switch(c.getCodigo()){
+            case 0:
+                break;
+            case 1:
+                consultarHora();
+                break;
+            case 2:
+                cambiarHor();
+                break;
+            case 3:
+                consultarFecha();
+                break;
+            case 4:
+                
+                
+        }
+        
+    }
     
+    private void consultarHora(){
+        System.out.println(r.getHoraSistema());
+    }
+    
+    private void cambiarHor(){
+        r.cambiarHora();
+    }
+    
+    private void consultarFecha(){
+        System.out.println(r.getFechaHoy());
+    }
 
              
     public Usuario getU() {
