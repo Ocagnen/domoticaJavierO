@@ -45,7 +45,11 @@ public enum Comando {
     
     CONSULTAR_PUERTA_GARAJE(24,"Consulta el estado de la puerta del garaje"),
     ABRIR_PUERTA_GARAJE(25,"Abre la puerta del garaje"),
-    CERRAR_PUERTA_GARAJE(26, "Cierra la puerta del garaje");
+    CERRAR_PUERTA_GARAJE(26, "Cierra la puerta del garaje"),
+    
+    APAGAR_TODAS_LUCES(27, "Apaga todas las luces de la casa"),
+    APAGADO_ECO(28,"Apaga luces dependiendo de hora y persiana");
+    
 
     private int codigo;
     private String descripcion;
