@@ -46,10 +46,23 @@ public class Luz {
         }
         return -1;
     }
+    
+    public String mostrarLuz(){
+        
+        String estad = "";
+        
+        if(this.estado){
+            estad = "Encendida";
+        } else {
+            estad = "Apagada";
+        }
+        
+        return estad;
+    }
 
     @Override
     public String toString() {
-        return "Luz{" + "estado=" + estado + ", consumo=" + consumo + '}';
+        return "Luz{" + "estado=" + mostrarLuz() + ", consumo=" + consumo + '}';
     }
     
     
