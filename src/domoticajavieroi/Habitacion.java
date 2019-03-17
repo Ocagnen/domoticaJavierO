@@ -48,7 +48,7 @@ public class Habitacion extends Estancia {
 
     @Override
     public String toString() {
-        return "Habitacion{" + "luz=" + luz + ", persiana=" + persiana + ", camara=" + camara + '}';
+        return super.toString() + "\nHabitacion{" + "luz=" + luz + ", persiana=" + persiana + ", camara=" + camara + '}';
     }
     
     

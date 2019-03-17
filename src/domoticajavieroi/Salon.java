@@ -28,7 +28,7 @@ public class Salon extends Habitacion {
 
     @Override
     public String toString() {
-        return "Salon{" + "terraza=" + terraza + '}';
+        return super.toString()+ "\nSalon{" + "terraza=" + terraza + '}';
     }
     
     
