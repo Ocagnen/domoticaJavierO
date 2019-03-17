@@ -17,6 +17,10 @@ public class Salon extends Habitacion {
         super(luz, persiana, camara, m2);
         this.terraza = terraza;
     }
+    
+    public Salon(){
+        super();
+    }
 
     public boolean isTerraza() {
         return terraza;
