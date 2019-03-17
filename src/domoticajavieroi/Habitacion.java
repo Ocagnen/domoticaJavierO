@@ -10,7 +10,7 @@ package domoticajavieroi;
  * @author javier
  */
 public class Habitacion extends Estancia {
-    
+
     private Luz luz;
     private Persiana persiana;
     private Camara camara;
@@ -20,6 +20,12 @@ public class Habitacion extends Estancia {
         this.luz = luz;
         this.persiana = persiana;
         this.camara = camara;
+    }
+
+    public Habitacion() {
+        this.camara = new Camara();
+        this.luz = new Luz();
+        this.persiana = new Persiana();
     }
 
     public Luz getLuz() {
@@ -50,7 +56,5 @@ public class Habitacion extends Estancia {
     public String toString() {
         return super.toString() + "\nHabitacion{" + "luz=" + luz + ", persiana=" + persiana + ", camara=" + camara + '}';
     }
-    
-    
-    
+
 }
