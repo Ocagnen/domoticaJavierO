@@ -18,7 +18,7 @@ public class Reloj {
     private static LocalDate fechaHoy = LocalDate.now();
     private static LocalTime horaSistema = LocalTime.now();
 
-    public static void cambiarHora() {
+    public void cambiarHora() {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Introduzca hora");
