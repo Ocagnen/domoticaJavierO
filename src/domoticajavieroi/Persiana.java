@@ -45,6 +45,25 @@ public class Persiana {
         }
         return -1;
     }
+    
+    public String mostrarEstado(){
+        
+        String estad = "";
+        
+        switch(this.estado){
+            case 0:
+                estad = "persiana bajada completamente";
+                break;
+            case 1:
+                estad = "persiana a la mitad";
+                break;
+            case 2:
+                estad = "persiana subida entera";
+                break;
+        }
+        
+        return estad;
+    }
 
     public void setEstado(int estado) {
         if (estado > 2 || estado < 0) {
@@ -71,7 +90,7 @@ public class Persiana {
 
     @Override
     public String toString() {
-        return "Persiana{" + "estado=" + estado + ", largo=" + largo + ", ancho=" + ancho + '}';
+        return "Persiana{" + "estado=" + mostrarEstado() + ", largo=" + largo + ", ancho=" + ancho + '}';
     }
 
 }
