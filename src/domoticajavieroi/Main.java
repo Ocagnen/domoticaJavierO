@@ -5,18 +5,38 @@
  */
 package domoticajavieroi;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Javier
  */
 public class Main {
-    public static void main(String[] args) {    
+
+    public static void main(String[] args) {
+
+        Central c1 = new Central(new Reloj(), new Usuario(), "00001", LocalDate.now(), new Garaje(), new Salon(), new Dormitorio());
+
+        boolean usuarioCorrecto = false;
+        int intentos = 0;
         
-        if(Vista.loggin().equals(new Usuario())){
-            Vista.mostrarMenu();
-        } else {
-            System.out.println("Usuario no autorizado");
-        }        
+
+        usuarioCorrecto = Vista.loggin().equals(c1.getU());
+
+        while (usuarioCorrecto == false && intentos < 4) {
+            System.out.println("Usuario o contraseña incorrectos");
+            usuarioCorrecto = Vista.loggin().equals(c1.getU());
+            intentos++;
+        }
+
         
+            if (usuarioCorrecto) {
+                Comando a;
+                do{
+                a = Vista.mostrarMenu();
+                c1.ejecutarOrden(a);
+                }while (a!=a.APAGAR_SISTEMA);            
+        } 
+
     }
 }
