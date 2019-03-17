@@ -24,7 +24,8 @@ public class Vista {
         System.out.println("2. Fecha");
         System.out.println("3. Habitaciones");
         System.out.println("4. Garaje");
-        System.out.println("5. Apagar el sistema");
+        System.out.println("5. Consultar estado general del sistema");
+        System.out.println("6. Apagar el sistema");
         respuesta = tec.nextInt();
 
         switch (respuesta) {
@@ -53,9 +54,11 @@ public class Vista {
                 break;
 
             case 3:
-                System.out.println("Selecciona la habitación que consultar");
-                System.out.println("1. Dormitorio");
-                System.out.println("2. Salon");
+                System.out.println("Selecciona la acción a realizar");
+                System.out.println("1. Gestionar dormitorio");
+                System.out.println("2. Gestionar salon");
+                System.out.println("3. Apagar todas las luces");
+                System.out.println("4. Apagado eco");
                 respuesta = tec.nextInt();
 
                 switch (respuesta) {
@@ -174,6 +177,11 @@ public class Vista {
                                 break;
 
                         }
+                        
+                    case 3:
+                       return Comando.APAGAR_TODAS_LUCES;
+                    case 4:
+                        return Comando.APAGADO_ECO;
                 }
 
             case 4:
@@ -191,9 +199,12 @@ public class Vista {
                         return Comando.APAGAR_LUZ_SALON;
                 }
                 break;
-                
-                
+            
             case 5:
+                return Comando.MOSTRAR_ESTADO_GENERAL;
+                
+                
+            case 6:
                 return Comando.APAGAR_SISTEMA;               
 
         }
