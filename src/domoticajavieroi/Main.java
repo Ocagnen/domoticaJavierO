@@ -19,7 +19,6 @@ public class Main {
 
         boolean usuarioCorrecto = false;
         int intentos = 0;
-        
 
         usuarioCorrecto = Vista.loggin().equals(c1.getU());
 
@@ -29,14 +28,14 @@ public class Main {
             intentos++;
         }
 
-        
-            if (usuarioCorrecto) {
-                Comando a;
-                do{
+        if (usuarioCorrecto) {
+            Comando a;
+            do {
                 a = Vista.mostrarMenu();
                 c1.ejecutarOrden(a);
-                }while (a!=a.APAGAR_SISTEMA);            
-        } 
+                System.out.println("");
+            } while (a != a.APAGAR_SISTEMA);
+        }
 
     }
 }
