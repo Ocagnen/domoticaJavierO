@@ -192,7 +192,7 @@ public class Vista {
                 respuesta = tec.nextInt();
                 switch (respuesta) {
                     case 1:
-                        return Comando.CONSULTAR_LUZ_SALON;
+                        return Comando.CONSULTAR_PUERTA_GARAJE;
                     case 2:
                         return Comando.ENCENDER_LUZ_SALON;
                     case 3:
