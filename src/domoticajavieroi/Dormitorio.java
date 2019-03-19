@@ -13,15 +13,15 @@ public class Dormitorio extends Habitacion{
     
     private Orientacion orientacion;
 
-    public Dormitorio(Luz luz, Persiana persiana, Camara camara, int m2) {
+    public Dormitorio(Luz luz, Persiana persiana, Camara camara, int m2, Orientacion orientacion) {
         super(luz, persiana, camara, m2);
+        this.orientacion = orientacion;
     }    
     
     public Dormitorio(){        
         super();      
         
-    }
-    
+    }    
 
     public Orientacion getOrientacion() {
         return orientacion;
