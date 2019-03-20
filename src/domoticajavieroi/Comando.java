@@ -52,7 +52,10 @@ public enum Comando {
     APAGAR_TODAS_LUCES(29, "Apaga todas las luces de la casa"),
     APAGADO_ECO(30,"Apaga luces dependiendo de hora y persiana"),
     
-    MOSTRAR_ESTADO_GENERAL(31, "Muestra el estado general de la vivienda");
+    MOSTRAR_ESTADO_GENERAL(31, "Muestra el estado general de la vivienda"),
+    
+    PERSIANAS_MITAD_SALON(32, "Deja la persiana del salón abierta a la mitad"),
+    PERSIANAS_MITAD_DORMITORIO(33,"Deja la persiana del dormitorio abierta a la mitad");
     
 
     private int codigo;
