@@ -76,6 +76,7 @@ public class Vista {
                                 System.out.println("1. Consultar estado de persiana");
                                 System.out.println("2. Abrir persiana");
                                 System.out.println("3. Cerrar persiana");
+                                System.out.println("4. Dejar persiana a la mitad");
                                 respuesta = tec.nextInt();
 
                                 switch (respuesta) {
@@ -85,6 +86,8 @@ public class Vista {
                                         return Comando.ABRIR_PERSIANA_DORMITORIO;
                                     case 3:
                                         return Comando.CERRAR_PERSIANA_DORMITORIO;
+                                    case 4:
+                                        return Comando.PERSIANAS_MITAD_DORMITORIO;
                                 }
                                 break;
                             case 2:
@@ -134,6 +137,7 @@ public class Vista {
                                 System.out.println("1. Consultar estado de persiana");
                                 System.out.println("2. Abrir persiana");
                                 System.out.println("3. Cerrar persiana");
+                                System.out.println("4. Dejar persiana a la mitad");
                                 respuesta = tec.nextInt();
 
                                 switch (respuesta) {
@@ -143,6 +147,8 @@ public class Vista {
                                         return Comando.ABRIR_PERSIANA_SALON;
                                     case 3:
                                         return Comando.CERRAR_PERSIANA_SALON;
+                                    case 4:
+                                        return Comando.PERSIANAS_MITAD_SALON;
                                 }
                                 break;
                             case 2:
@@ -194,9 +200,9 @@ public class Vista {
                     case 1:
                         return Comando.CONSULTAR_PUERTA_GARAJE;
                     case 2:
-                        return Comando.ENCENDER_LUZ_SALON;
+                        return Comando.ABRIR_PUERTA_GARAJE;
                     case 3:
-                        return Comando.APAGAR_LUZ_SALON;
+                        return Comando.CERRAR_PUERTA_GARAJE;
                 }
                 break;
             
