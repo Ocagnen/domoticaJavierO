@@ -56,13 +56,13 @@ public class Persiana {
         
         switch(this.estado){
             case 0:
-                estad = "persiana bajada completamente";
+                estad = "Persiana bajada completamente";
                 break;
             case 1:
-                estad = "persiana a la mitad";
+                estad = "Persiana a la mitad";
                 break;
             case 2:
-                estad = "persiana subida entera";
+                estad = "Persiana subida entera";
                 break;
         }
         
@@ -99,7 +99,7 @@ public class Persiana {
 
     @Override
     public String toString() {
-        return "Persiana{" + "estado=" + mostrarEstado() + ", largo=" + largo + ", ancho=" + ancho + '}';
+        return mostrarEstado() + ", largo=" + largo + ", ancho=" + ancho;
     }
 
 }

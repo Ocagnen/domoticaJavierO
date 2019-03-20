@@ -73,7 +73,7 @@ public class Puerta {
 
     @Override
     public String toString() {
-        return "Puerta{" + "estado=" + estadoPuerta() + ", retardo=" + retardo + '}';
+        return "Puerta:\t "+estadoPuerta() + ", retardo=" + retardo;
     }
     
     

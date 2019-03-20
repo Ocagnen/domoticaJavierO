@@ -66,7 +66,7 @@ public class Luz {
 
     @Override
     public String toString() {
-        return "Luz{" + "estado=" + mostrarLuz() + ", consumo=" + consumo + '}';
+        return mostrarLuz() + ", consumo=" + consumo;
     }
     
     

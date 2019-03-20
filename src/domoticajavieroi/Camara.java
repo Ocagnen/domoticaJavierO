@@ -20,7 +20,7 @@ public class Camara {
     }
     
     public Camara(){
-        
+        this.ip="000000000";
     }
 
     public boolean isEstado() {
@@ -70,7 +70,7 @@ public class Camara {
 
     @Override
     public String toString() {
-        return "Camara{" + "estado=" + mostrarEstadoCam() + ", ip=" + ip + '}';
+        return mostrarEstadoCam() + ", ip=" + ip ;
     }
     
     

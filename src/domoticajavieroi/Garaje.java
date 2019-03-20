@@ -62,7 +62,7 @@ public class Garaje extends Estancia {
     // apunta a la clase padre de la clase en la que estoy
     @Override
     public String toString() {
-        return super.toString() + "\nGaraje{" + "capacidadVehiculos=" + capacidadVehiculos + ",\n " + puertaGaraje + '}';
+        return super.toString() + "\nGaraje: " + "\tCapacidad de vehículos=" + capacidadVehiculos + "\n" + puertaGaraje;
     }
     
     

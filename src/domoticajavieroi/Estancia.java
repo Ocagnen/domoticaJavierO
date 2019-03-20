@@ -31,7 +31,7 @@ public class Estancia {
 
     @Override
     public String toString() {
-        return "Estancia{" + "m2=" + m2 + '}';
+        return "\nEstancia: " + "\tm2=" + m2;
     }
     
     

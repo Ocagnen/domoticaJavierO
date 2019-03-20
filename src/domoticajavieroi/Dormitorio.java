@@ -34,7 +34,7 @@ public class Dormitorio extends Habitacion{
 
     @Override
     public String toString() {
-        return super.toString()+"\tDormitorio{" + "orientacion=" + orientacion + '}';
+        return super.toString()+"\nOrientacion:" + orientacion ;
     }
 
     

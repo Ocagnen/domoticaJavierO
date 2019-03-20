@@ -263,11 +263,12 @@ public class Central {
     private void mostrarEstadoGeneral() {
         System.out.println("Fecha del sistema: \t" + this.r.getFechaHoy());
         System.out.println("Hora del sistema: \t" + this.r.getHoraSistema());
-        System.out.println("Estado de salón: \t" + this.salon.toString());
         System.out.println("");
-        System.out.println("Estado de dormitorio: \t" + this.dormitorio.toString());
+        System.out.println("Estado de SALÓN: \t" + this.salon.toString());
         System.out.println("");
-        System.out.println("Estado de garaje: \t" + this.garaje.toString());
+        System.out.println("Estado de DORMITORIO: \t" + this.dormitorio.toString());
+        System.out.println("");
+        System.out.println("Estado de GARAJE: \t" + this.garaje.toString());
         System.out.println("");
     }
 
