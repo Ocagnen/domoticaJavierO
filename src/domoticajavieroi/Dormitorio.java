@@ -19,7 +19,8 @@ public class Dormitorio extends Habitacion{
     }    
     
     public Dormitorio(){        
-        super();      
+        super();  
+        this.orientacion = orientacion.ESTE;
         
     }    
 
