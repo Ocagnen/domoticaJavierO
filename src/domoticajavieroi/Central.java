@@ -18,14 +18,12 @@ public class Central {
     private Reloj r;
     private Usuario u;
     private String identificador;
-    private LocalDate fechaInstal; 
+    private LocalDate fechaInstal;
     private Garaje garaje;
     private Salon salon;
     private Dormitorio dormitorio;
-    
-    
 
-    public Central(Reloj r,Usuario u, String identificador, LocalDate fechaInstal, Garaje garaje, Salon salon, Dormitorio dormitorio) {
+    public Central(Reloj r, Usuario u, String identificador, LocalDate fechaInstal, Garaje garaje, Salon salon, Dormitorio dormitorio) {
         this.r = r;
         this.u = u;
         this.identificador = identificador;
@@ -34,10 +32,10 @@ public class Central {
         this.salon = salon;
         this.dormitorio = dormitorio;
     }
-    
-    public void ejecutarOrden(Comando c){
-        
-        switch(c.getCodigo()){
+
+    public void ejecutarOrden(Comando c) {
+
+        switch (c.getCodigo()) {
             case 0:
                 System.out.println("Apagando sistema");
                 break;
@@ -63,8 +61,8 @@ public class Central {
                 mitadPersiana(this.dormitorio);
                 break;
             case 8:
-               cerrarPersiana(this.dormitorio);
-               break;
+                cerrarPersiana(this.dormitorio);
+                break;
             case 9:
                 consultarCam(this.dormitorio);
                 break;
@@ -96,8 +94,8 @@ public class Central {
                 mitadPersiana(this.salon);
                 break;
             case 19:
-               cerrarPersiana(this.salon);
-               break;
+                cerrarPersiana(this.salon);
+                break;
             case 20:
                 consultarCam(this.salon);
                 break;
@@ -115,10 +113,10 @@ public class Central {
                 break;
             case 25:
                 apagarLuz(this.salon);
-                break;    
+                break;
             case 26:
-               consultarPuertaGaraje();
-               break;
+                consultarPuertaGaraje();
+                break;
             case 27:
                 abrirPuertaGaraje();
                 break;
@@ -141,115 +139,138 @@ public class Central {
                 mitadPersiana(this.dormitorio);
                 break;
         }
-        
+
     }
-    
-    private void consultarHora(){
+
+    private void consultarHora() {
         System.out.println(r.getHoraSistema());
     }
-    
-    private void cambiarHor(){
+
+    private void cambiarHor() {
         r.cambiarHora();
     }
-    
-    private void consultarFecha(){
+
+    private void consultarFecha() {
         System.out.println(r.getFechaHoy());
     }
-    
-    private void consultarDormitorio(){
+
+    private void consultarDormitorio() {
         System.out.println(dormitorio);
     }
-    
-    private void consultarPersiana(Habitacion hab){
+
+    private void consultarPersiana(Habitacion hab) {
         System.out.println(hab.getPersiana().mostrarEstado());
     }
-    
-    private void abrirPersiana(Habitacion hab){
+
+    private void abrirPersiana(Habitacion hab) {
         hab.getPersiana().abrirPersianaCompleta();
     }
-    
-    private void mitadPersiana(Habitacion hab){
+
+    private void mitadPersiana(Habitacion hab) {
         hab.getPersiana().dejarPersianaMitad();
     }
-   
-    private void cerrarPersiana(Habitacion hab){
+
+    private void cerrarPersiana(Habitacion hab) {
         hab.getPersiana().cerrarPersiana();
     }
-    
-    private void consultarCam(Habitacion hab){
+
+    private void consultarCam(Habitacion hab) {
         System.out.println(hab.getCamara().mostrarEstadoCam());
     }
-    
-    private void encenderCam(Habitacion hab){
+
+    private void encenderCam(Habitacion hab) {
+
         hab.getCamara().encenderCamara();
+
+        if (comprobarHoras(LocalTime.of(20, 0), LocalTime.of(8, 0)) && !hab.getLuz().isEstado()) {
+
+            hab.getLuz().encenderLuz();
+
+        } else if (comprobarHoras(LocalTime.of(8, 0), LocalTime.of(18, 0)) && hab.getLuz().isEstado() && hab.getPersiana().getEstado() == 0) {
+
+            hab.getLuz().encenderLuz();
+        }
+
     }
-    
-    private void apagarCam(Habitacion hab){
+
+    private boolean comprobarHoras(LocalTime inicio, LocalTime fin) {
+        
+        return LocalTime.now().isAfter(inicio) && LocalTime.now().isBefore(fin);
+    }
+
+    private void apagarCam(Habitacion hab) {
+        
         hab.getCamara().apagarCamara();
+        
+        if(comprobarHoras(LocalTime.of(20, 0),LocalTime.of(8, 0))){
+            hab.getLuz().apagarLuzManual();
+        } else if (comprobarHoras(LocalTime.of(8, 0),LocalTime.of(18, 0))){
+            hab.getLuz().apagarLuzManual();
+        }
+
     }
-    
-    private void consultarLuz(Habitacion hab){
+
+    private void consultarLuz(Habitacion hab) {
         System.out.println(hab.getLuz().mostrarLuz());
     }
-    
-    private void encenderLuz(Habitacion hab){
+
+    private void encenderLuz(Habitacion hab) {
         hab.getLuz().encenderLuz();
     }
-    
-    private void apagarLuz(Habitacion hab){
+
+    private void apagarLuz(Habitacion hab) {
         hab.getLuz().apagarLuzManual();
     }
-    
-    private void consultarSalon(){
+
+    private void consultarSalon() {
         System.out.println(salon);
     }
-    
-    private void consultarPuertaGaraje(){
+
+    private void consultarPuertaGaraje() {
         System.out.println(garaje.getPuertaGaraje().estadoPuerta());
     }
-    
-    private void abrirPuertaGaraje(){
+
+    private void abrirPuertaGaraje() {
         garaje.getPuertaGaraje().abrirPuerta();
     }
-    
-    private void cerrarPuertaGaraje(){
+
+    private void cerrarPuertaGaraje() {
         garaje.getPuertaGaraje().cerrarPuerta();
     }
-    
-    private void apagarTodasLuces(){
+
+    private void apagarTodasLuces() {
         salon.getLuz().apagarLuzManual();
         dormitorio.getLuz().apagarLuzManual();
-    }       
-    
-    private void apagadoEco(){
-        
+    }
+
+    private void apagadoEco() {
+
         LocalTime comienzo = LocalTime.of(8, 0, 0);
         LocalTime fin = LocalTime.of(18, 0, 0);
-        
-        if(LocalTime.now().isAfter(comienzo)&&LocalTime.now().isBefore(fin)){
-            if(this.dormitorio.getLuz().isEstado() && this.dormitorio.getPersiana().getEstado()==2){
+
+        if (LocalTime.now().isAfter(comienzo) && LocalTime.now().isBefore(fin)) {
+            if (this.dormitorio.getLuz().isEstado() && this.dormitorio.getPersiana().getEstado() == 2) {
                 this.apagarLuz(dormitorio);
             }
-            
-            if(this.salon.getLuz().isEstado() && this.salon.getPersiana().getEstado()==2){
+
+            if (this.salon.getLuz().isEstado() && this.salon.getPersiana().getEstado() == 2) {
                 this.apagarLuz(salon);
             }
         }
-        
-        
+
     }
 
-    private void mostrarEstadoGeneral(){
-        System.out.println("Fecha del sistema: \t"+this.r.getFechaHoy());
-        System.out.println("Hora del sistema: \t"+this.r.getHoraSistema());
-        System.out.println("Estado de salón: \t"+this.salon.toString());
+    private void mostrarEstadoGeneral() {
+        System.out.println("Fecha del sistema: \t" + this.r.getFechaHoy());
+        System.out.println("Hora del sistema: \t" + this.r.getHoraSistema());
+        System.out.println("Estado de salón: \t" + this.salon.toString());
         System.out.println("");
-        System.out.println("Estado de dormitorio: \t"+this.dormitorio.toString());
+        System.out.println("Estado de dormitorio: \t" + this.dormitorio.toString());
         System.out.println("");
-        System.out.println("Estado de garaje: \t"+this.garaje.toString());
+        System.out.println("Estado de garaje: \t" + this.garaje.toString());
         System.out.println("");
-    } 
-    
+    }
+
     public Usuario getU() {
         return u;
     }
