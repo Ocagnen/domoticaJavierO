@@ -69,6 +69,11 @@ public class Persiana {
         return estad;
     }
 
+    public int getEstado() {
+        return estado;
+    }   
+    
+
     public void setEstado(int estado) {
         if (estado > 2 || estado < 0) {
             estado = 0;

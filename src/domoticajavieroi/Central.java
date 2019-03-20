@@ -7,6 +7,7 @@ package domoticajavieroi;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 /**
  *
@@ -128,6 +129,7 @@ public class Central {
                 apagarTodasLuces();
                 break;
             case 30:
+                apagadoEco();
                 break;
             case 31:
                 mostrarEstadoGeneral();
@@ -220,6 +222,20 @@ public class Central {
     }       
     
     private void apagadoEco(){
+        
+        LocalTime comienzo = LocalTime.of(8, 0, 0);
+        LocalTime fin = LocalTime.of(18, 0, 0);
+        
+        if(LocalTime.now().isAfter(comienzo)&&LocalTime.now().isBefore(fin)){
+            if(this.dormitorio.getLuz().isEstado() && this.dormitorio.getPersiana().getEstado()==2){
+                this.apagarLuz(dormitorio);
+            }
+            
+            if(this.salon.getLuz().isEstado() && this.salon.getPersiana().getEstado()==2){
+                this.apagarLuz(salon);
+            }
+        }
+        
         
     }
 
