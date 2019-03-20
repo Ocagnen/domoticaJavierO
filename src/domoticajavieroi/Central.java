@@ -38,6 +38,7 @@ public class Central {
         
         switch(c.getCodigo()){
             case 0:
+                System.out.println("Apagando sistema");
                 break;
             case 1:
                 consultarHora();
@@ -131,6 +132,12 @@ public class Central {
             case 31:
                 mostrarEstadoGeneral();
                 break;
+            case 32:
+                mitadPersiana(this.salon);
+                break;
+            case 33:
+                mitadPersiana(this.dormitorio);
+                break;
         }
         
     }
@@ -162,7 +169,7 @@ public class Central {
     private void mitadPersiana(Habitacion hab){
         hab.getPersiana().dejarPersianaMitad();
     }
-    
+   
     private void cerrarPersiana(Habitacion hab){
         hab.getPersiana().cerrarPersiana();
     }
@@ -220,8 +227,11 @@ public class Central {
         System.out.println("Fecha del sistema: \t"+this.r.getFechaHoy());
         System.out.println("Hora del sistema: \t"+this.r.getHoraSistema());
         System.out.println("Estado de salón: \t"+this.salon.toString());
+        System.out.println("");
         System.out.println("Estado de dormitorio: \t"+this.dormitorio.toString());
+        System.out.println("");
         System.out.println("Estado de garaje: \t"+this.garaje.toString());
+        System.out.println("");
     } 
     
     public Usuario getU() {
