@@ -186,7 +186,7 @@ public class Central {
 
             hab.getLuz().encenderLuz();
 
-        } else if (comprobarHoras(LocalTime.of(8, 0), LocalTime.of(18, 0)) && hab.getLuz().isEstado() && hab.getPersiana().getEstado() == 0) {
+        } else if (comprobarHoras(LocalTime.of(8, 0), LocalTime.of(18, 0)) && !hab.getLuz().isEstado() && hab.getPersiana().getEstado() == 0) {
 
             hab.getLuz().encenderLuz();
         }
@@ -203,8 +203,11 @@ public class Central {
         hab.getCamara().apagarCamara();
         
         if(comprobarHoras(LocalTime.of(20, 0),LocalTime.of(8, 0))){
+            
             hab.getLuz().apagarLuzManual();
+            
         } else if (comprobarHoras(LocalTime.of(8, 0),LocalTime.of(18, 0))){
+            
             hab.getLuz().apagarLuzManual();
         }
 
@@ -261,15 +264,18 @@ public class Central {
     }
 
     private void mostrarEstadoGeneral() {
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("ESTADO DE LA VIVIENDA");
+        System.out.println("");
         System.out.println("Fecha del sistema: \t" + this.r.getFechaHoy());
         System.out.println("Hora del sistema: \t" + this.r.getHoraSistema());
         System.out.println("");
+        System.out.println("Estado de DORMITORIO: \t" + this.dormitorio.toString());        
+        System.out.println("");
         System.out.println("Estado de SALÓN: \t" + this.salon.toString());
         System.out.println("");
-        System.out.println("Estado de DORMITORIO: \t" + this.dormitorio.toString());
-        System.out.println("");
         System.out.println("Estado de GARAJE: \t" + this.garaje.toString());
-        System.out.println("");
+        System.out.println("-----------------------------------------------------------");
     }
 
     public Usuario getU() {
